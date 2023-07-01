@@ -179,24 +179,23 @@ void coloreArtificial(FILE *origem,int linhas, int colunas, int vmax){
                     n = n + matriz[i][j][k];
                 }
                 n = n / 3;
-                fprintf(destino, "%d %d %d ", n, n, n);
-                t = rand()%6;
-                if(t == 0){
+//                fprintf(destino, "%d %d %d ", n, n, n);
+                if(n <=42){
                 	r=255; g=0;g=0;
                 	fprintf(destino, "%d %d %d ", r, g, b);
-				} else if(t == 1){
+				} else if(n>42 && n<=84){
                 	r=255; g=255;g=0;
                 	fprintf(destino, "%d %d %d ", r, g, b);
-				}  else if(t == 2){
+				}  else if(n>84 && n<=126){
                 	r=255; g=255;g=255;
                 	fprintf(destino, "%d %d %d ", r, g, b);
-				}  else if(t == 3){
+				}  else if(n>126 && n<=168){
                 	r=255; g=0;g=255;
                 	fprintf(destino, "%d %d %d ", r, g, b);
-				}  else if(t == 4){
+				}  else if(n>168 && n<=210){
                 	r=0; g=255;g=255;
                 	fprintf(destino, "%d %d %d ", r, g, b);
-				}  else if(t == 5){
+				}  else if(n>210){
                 	r=0; g=0;g=255;
                 	fprintf(destino, "%d %d %d ", r, g, b);
 				} 
